@@ -28,17 +28,8 @@ class HX711:
         Raises:
             TypeError: if pd_sck_pin or dout_pin are not int type
         """
-        if (isinstance(dout_pin, int)):
-            if (isinstance(pd_sck_pin, int)):
-                self._pd_sck = pd_sck_pin
-                self._dout = dout_pin
-            else:
-                raise TypeError('pd_sck_pin must be type int. '
-                                'Received pd_sck_pin: {}'.format(pd_sck_pin))
-        else:
-            raise TypeError('dout_pin must be type int. '
-                            'Received dout_pin: {}'.format(dout_pin))
-
+        self._pd_sck = pd_sck_pin
+        self._dout = dout_pin
         self._gain_channel_A = 0
         self._offset_A_128 = 0  # offset for channel A and gain 128
         self._offset_A_64 = 0  # offset for channel A and gain 64
