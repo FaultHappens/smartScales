@@ -1,5 +1,5 @@
 1 ->
-2 -> HX711 VCCpin, LCD VCCpin, BUTTONpin, SENDBUTTONpin
+2 -> HX711 VCCpin, LCD VCCpin, BUTTONpin
 3 -> LCD SDApin
 4 ->
 5 -> LCD SCKpin
@@ -10,5 +10,5 @@
 10 ->
 11 -> BUTTONpin
 12 -> LED+
-13 -> SENDBUTTONpin
+13 ->
 14 ->
