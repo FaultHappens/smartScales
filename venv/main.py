@@ -170,8 +170,8 @@ def readWeight():
     return weight
     
 def writeToLcd(weightt):
-	message = f"     {int(weightt)} g"
-	lcd_string(message,LCD_LINE_1)
+    message = f"     {int(weightt)} g"
+    lcd_string(message,LCD_LINE_1)
 
 lcd_init()
 while True:
@@ -182,9 +182,9 @@ while True:
         print("Set zero!")
     weight = readWeight()
     if weight <= 0:
-	writeToLcd(0)
+        writeToLcd(0)
     else:
-    	writeToLcd(weight)
+        writeToLcd(weight)
     print(weight)
     if weight >= minWeight:
         gpio.output(ledPin, 1)
