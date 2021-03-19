@@ -33,8 +33,8 @@ smtp_server = "smtp.gmail.com"
 sender_email = "smartscalesdigitec@gmail.com"
 receiver_email = "tskitishvili04@gmail.com"
 password = "digiTec61"
-emailSendingTime = 23
-filename = "output.xlsx"
+emailSendingTime = 22
+filename = "/etc/smartScales/venv/output.xlsx"
 waitTime = 3
 
 gpio.output(ledPin, 0)
@@ -181,7 +181,10 @@ while True:
         hx.zero()
         print("Set zero!")
     weight = readWeight()
-    writeToLcd(weight)
+    if weight <= 0:
+	writeToLcd(0)
+    else:
+    	writeToLcd(weight)
     print(weight)
     if weight >= minWeight:
         gpio.output(ledPin, 1)
